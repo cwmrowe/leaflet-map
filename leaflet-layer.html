@@ -331,7 +331,7 @@ Polymer({
 		if (this.container) {
 			var cleanedUrl = this.url.replace(new RegExp("%7B([sxyz])%7D", "g"), '{$1}');
 			var layer = L.tileLayer(cleanedUrl, {
-				attribution: Polymer.dom(this).innerHTML + this.attribution,
+				attribution: this.innerHTML + this.attribution,
 				minZoom: this.minZoom,
 				maxZoom: this.maxZoom,
 				maxNativeZoom: this.maxNativeZoom,
@@ -482,7 +482,7 @@ element which defines a tile layer for wms (<a href="http://leafletjs.com/refere
 		_containerChanged: function() {
 			if (this.container) {
 				var layer = L.tileLayer.wms(this.url, {
-					attribution: Polymer.dom(this).innerHTML + this.attribution,
+					attribution: this.innerHTML + this.attribution,
 					minZoom: this.minZoom,
 					maxZoom: this.maxZoom,
 					maxNativeZoom: this.maxNativeZoom,
